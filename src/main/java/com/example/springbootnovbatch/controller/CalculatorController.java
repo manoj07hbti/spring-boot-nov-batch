@@ -16,4 +16,20 @@ public class CalculatorController {
         return "Addition is :"+sum;
 
     }
+
+    @RequestMapping("/even")
+    public String even(){
+        String output="";
+        for (int i=1; i<=100; i++){
+
+            if(i%2==0) {
+
+
+                output+=i;// output= output + i
+                output+=", ";
+            }
+        }
+
+        return output;
+    }
 }
