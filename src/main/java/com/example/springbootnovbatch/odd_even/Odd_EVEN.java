@@ -32,9 +32,23 @@ public class Odd_EVEN {
             }else{
                 System.out.println("odd "+i);
             }
+            // http://localhost:8081/evenodd
         }
     }
-    // http://localhost:8081/evenodd
+
+
+    // Screen odd even
+    @RequestMapping("Even")
+    public String even (){
+        String output="";
+        for (int i=1; i<=100; i++){
+
+            if (i%2==0){
+                output = output + i; //output+= (also written)
+                output=  output + ",";
+            }
+        }return output;
+    }    //   http://localhost:8081/Even
 }
 
 
