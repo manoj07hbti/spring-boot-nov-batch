@@ -16,4 +16,31 @@ public class CalculatorController {
         return "Addition is :"+sum;
 
     }
+
+    @RequestMapping("/sub")
+    public String sub() {
+        int a = 15, b = 5;
+        int sub = a - b;
+
+        return "Subtraction of " + a + " - " + b + " = " + sub;
+    }
+
+    @RequestMapping("/multiply")
+    public String multiply() {
+        int a = 7;
+        int b = 8;
+        int multi = a * b;
+
+        return "Multiplication of  = " + multi;
+    }
+
+    @RequestMapping("/divide")
+    public String divide() {
+        double a = 15;
+        double b = 3;
+        double div = a / b;
+
+        return "Divide of  " + div;
+    }
+
 }
