@@ -39,7 +39,7 @@ public class CrudCarController {
 
     //D- DELETE
     @RequestMapping("/removecar/{index}")
-    // url Syntax - localhost:8081/removecar?index=1
+    // url Syntax - localhost:8081/removecar/1
     public String removecar(@PathVariable int index){
         cars.remove(index);
         return "Car Name Successfully Removed ";
