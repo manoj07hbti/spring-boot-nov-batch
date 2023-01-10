@@ -1,10 +1,7 @@
 package com.example.springbootnovbatch.controller;
 
 import com.example.springbootnovbatch.model.Student;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -13,6 +10,15 @@ public class StudentCrudController {
 
     ArrayList<Student> studentArrayList= new ArrayList<>();
 
+
+
+    @RequestMapping("/add_std")
+    public String addStudent(@RequestBody Student student){
+
+        studentArrayList.add(student);
+
+        return "Student Added Successfully ";
+    }
     //CREATE
 
     @RequestMapping("add_student/{name}/{age}/{section}")
