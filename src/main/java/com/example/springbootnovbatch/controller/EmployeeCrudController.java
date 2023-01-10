@@ -1,10 +1,7 @@
 package com.example.springbootnovbatch.controller;
 
 import com.example.springbootnovbatch.model.Employee;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -12,6 +9,16 @@ import java.util.ArrayList;
 public class EmployeeCrudController {
 
     ArrayList<Employee> employeeData = new ArrayList<>();
+
+    // postman JSON file
+    @RequestMapping("/add_emp")
+    public String addEmployeedata(@RequestBody Employee employee){
+
+        employeeData.add(employee);
+
+        return "Employee data added successfully";
+
+    }
 
     //Create section
     @RequestMapping("/addemployee/{name}/{age}/{department}")
