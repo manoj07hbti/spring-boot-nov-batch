@@ -19,8 +19,7 @@ public class CURDStudent {
     @RequestMapping("/student/{Name}")                      //localhost:8081/student/rahul
     public String student(@PathVariable String Name){
         student.add(Name);
-        Name = "student "+i+" Name : "+Name;
-        i++;
+
         return Name;
 
     }
