@@ -1,11 +1,13 @@
 package com.example.springbootnovbatch.model;
 
+
 public class Student {
+
     String name;
     int age;
     String section;
 
-    // parametrize constructor right click
+    // parameterized constructor
 
 
     public Student(String name, int age, String section) {
@@ -14,8 +16,7 @@ public class Student {
         this.section = section;
     }
 
-
-    // getter & setter
+    //getter and setters
 
 
     public String getName() {

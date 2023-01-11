@@ -1,36 +1,35 @@
 package com.example.springbootnovbatch.model;
 
-
-public class Employ {
+public class Employee {
 
     String name;
     int age;
     double salary;
-    String department;
+    String dep;
+
+    // parametrized constr by right click
 
 
-    // par const
-
-    public Employ(String name, int age, double salary, String department) {
+    public Employee(String name, int age, double salary, String dep) {
         this.name = name;
         this.age = age;
         this.salary = salary;
-        this.department = department;
+        this.dep = dep;
     }
 
-    // Getter & setter
+    // getter and setter
 
 
-    public String getName(String name) {
-        return this.name;
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getAge(int age) {
-        return this.age;
+    public int getAge() {
+        return age;
     }
 
     public void setAge(int age) {
@@ -45,11 +44,11 @@ public class Employ {
         this.salary = salary;
     }
 
-    public String getDepartment() {
-        return department;
+    public String getDep() {
+        return dep;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setDep(String dep) {
+        this.dep = dep;
     }
 }
