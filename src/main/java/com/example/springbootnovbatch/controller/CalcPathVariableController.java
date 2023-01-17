@@ -32,9 +32,9 @@ public class CalcPathVariableController {
 
 
     @RequestMapping("/Divide/{a}/{b}")
-    public String div(@PathVariable int a, @PathVariable int b) {
+    public String div(@PathVariable double a, @PathVariable double b) {
 
-        int div = a / b;
+        double div = a / b;
         return "Divide is : "+div;
     }
 }

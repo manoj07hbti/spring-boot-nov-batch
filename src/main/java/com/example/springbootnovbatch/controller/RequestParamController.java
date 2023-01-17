@@ -10,13 +10,14 @@ public class RequestParamController {
     @RequestMapping("/voting")
     public String vote(@RequestParam String city , @RequestParam int age) {
 
-        String result = "";
-        if (city.equals("Agra") & age >= 18) {
-            result = "Eligible for voting...";
-        } else {
-            result = "not eligible for voting...";
+
+        if (city.equals("Agra") & age > 18) {
+            return "Eligible for voting in Agra...";
         }
-        return result;
+        else {
+           return "not eligible for voting...";
+        }
+
     }
 
 

@@ -32,9 +32,9 @@ public class CalcRequestParam {
 
 
     @RequestMapping("/div_param")
-    public String div(@RequestParam int a, @RequestParam int b) {
+    public String div(@RequestParam double a, @RequestParam double b) {
 
-        int div= a / b;
+        double div= a / b;
         return "Divide is : "+div;
     }
 

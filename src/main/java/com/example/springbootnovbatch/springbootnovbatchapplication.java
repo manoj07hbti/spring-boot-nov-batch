@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootNovBatchApplication {
+public class springbootnovbatchapplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootNovBatchApplication.class, args);
+		SpringApplication.run(springbootnovbatchapplication.class, args);
 	}
 
 }
