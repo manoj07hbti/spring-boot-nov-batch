@@ -27,8 +27,11 @@ public class Employee2 {
     String employeeDepartment;
     double employeeSalary;
 
+     // Default Constructor
 
-
+    public Employee2() {
+        
+    }
 
 
     // Parameterized Constructor  (We will make it to fill the data)
