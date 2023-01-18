@@ -1,11 +1,26 @@
 package com.example.springbootnovbatch.model;
 
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity(name= "demo_Employee_table")
 public class Employee {
 
+    @Id
+    @GeneratedValue
+    long ID;
     String name;
+    @Column(name="STD_age")
     int age;
     double salary;
     String dep;
+
+    //DEFAULT CONSTRUCTOR
+    public Employee() {
+    }
+
 
     // parametrized constr by right click
 

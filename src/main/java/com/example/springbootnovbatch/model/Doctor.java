@@ -1,11 +1,24 @@
 package com.example.springbootnovbatch.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name = "DATABASE_DOCTOR_TABLE")
 public class Doctor {
+
+    @Id
+    @GeneratedValue
+    long ID;
 
     String name;
     int age;
     double salary;
     String dep;
+
+
+    public Doctor() {
+    }
 
     public Doctor(String name, int age, double salary, String dep) {
         this.name = name;

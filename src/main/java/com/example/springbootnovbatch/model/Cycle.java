@@ -1,10 +1,25 @@
 package com.example.springbootnovbatch.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name = "DATABASE_CYCLE_LIST")
 public class Cycle {
 
+    @Id
+    @GeneratedValue
+    long ID;
     String name;
+
+    @Column(name = "OFFER_PRICE")
     double price;
     int model;
+
+    // NON DEFAULT CONSTRUCTOR
+    public Cycle() {
+    }
 
     public Cycle(String name, double price, int model) {
         this.name = name;
