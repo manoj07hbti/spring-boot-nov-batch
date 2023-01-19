@@ -1,10 +1,24 @@
 package com.example.springbootnovbatch.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
+    @Id
+    @GeneratedValue
+    long id;
 
     String name;
     int age;
     String department;
+
+    // default constructor
+
+    public Employee() {
+    }
+
 
     // parameterized constructor
 
