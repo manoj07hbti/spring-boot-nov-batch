@@ -15,21 +15,21 @@ import java.util.ArrayList;
 
         // create
 
-        @RequestMapping("/employee/{name}/{company}/{salary}")
+        @RequestMapping("/employ/{name}/{company}/{salary}")
         public  String employee (@PathVariable String name, @PathVariable String company , @PathVariable int salary){
             Employee employee = new Employee(name ,company,salary);
             EmployeeArrayList.add (employee);
             return " it created successfully "  ;
         }
         // read or get
-        @RequestMapping("/get_all_Employeedata")
+        @RequestMapping("/get_all_Employdata")
         public ArrayList <Employee>getEmployeeArrayList(){
             return EmployeeArrayList;
 
         }
 
         // update
-        @RequestMapping("/updated/{name}/{index}")
+        @RequestMapping("/updates/{name}/{index}")
         public  String update( @PathVariable String name, @PathVariable int index ){
 
              //Step 1
@@ -44,7 +44,7 @@ import java.util.ArrayList;
 
         }
         // delete
-        @RequestMapping("/deleted")
+        @RequestMapping("/deletedemploy")
         public String deleted(@PathVariable int index){
             EmployeeArrayList.remove (index);
             return " it deleted successfully";
