@@ -23,4 +23,37 @@ public class EmployeeDBService {
     public List<Employee> getalldata(){
         return repository.findAll();
     }
+
+    //update name section
+    public String updateempname (long id, String name ){
+        //  step - 1 get the id using getById
+        Employee employee = repository.getById(id);
+        // step - 2 update name using setter
+        employee.setName(name);
+        repository.save(employee);
+        return "update name successfully : "+name;
+    }
+
+    //update Age section
+    public String updateempage(long id , int age){
+        Employee employee = repository.getById(id);
+        employee.setAge(age);
+        repository.save(employee);
+        return "Age updated successfully";
+    }
+    //update name section
+    public String updateempdep (long id, String department ){
+        //  step - 1 get the id using getById
+        Employee employee = repository.getById(id);
+        // step - 2 update department using setter
+        employee.setDepartment(department);
+        repository.save(employee);
+        return "update department successfully ";
+    }
+    // delete data
+    public String deleteempdata(long id){
+        repository.deleteById(id);
+        return "data deleted successfully";
+    }
+
 }
