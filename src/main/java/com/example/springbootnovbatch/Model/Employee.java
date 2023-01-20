@@ -1,9 +1,23 @@
 package com.example.springbootnovbatch.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name = "Employee_Database_Table")
 public class Employee {
+    @Id
+    @GeneratedValue
+    long id;
     String name;
+    @Column(name = "emp_name")
     String company;
     int salary;
+
+// default constructor
+    public Employee() {
+    }
 
     public Employee(String name, String company, int salary) {
         this.name = name;
