@@ -25,4 +25,24 @@ public class StudentService {
 
         return repository.findAll();// select * from table
     }
+    //update
+
+    public String update( long id, String name){
+
+      //step 1 find the record from db
+      Student student=repository.getById(id); // select * from table where id=id
+
+      // step 2 update the name
+      student.setName(name);
+      repository.save(student);// again saved to database
+
+      return "Successfully updated name as "+name;
+    }
+    //delete
+    public String delete( long id){
+
+     repository.deleteById(id);// delete from table where id=id
+
+     return "Successfully deleted data";
+    }
 }
