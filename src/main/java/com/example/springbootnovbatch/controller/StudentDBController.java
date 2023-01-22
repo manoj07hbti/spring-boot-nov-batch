@@ -3,9 +3,7 @@ package com.example.springbootnovbatch.controller;
 import com.example.springbootnovbatch.model.Student;
 import com.example.springbootnovbatch.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +25,19 @@ public class StudentDBController {
     public List<Student> getAllStudent() {
 
         return service.getAllStudent();
+    }
+
+    // U
+    @RequestMapping("/update_Student/{id}/{name}")
+    public String update(@PathVariable long id, @PathVariable String name) {
+
+        return service.update(id,name);
+    }
+
+    // D
+    @RequestMapping("/delete_Student")
+    public String delete(@RequestParam long id) {
+
+        return service.delete(id);
     }
 }

@@ -30,8 +30,8 @@ public class Employee {
     // GETTER AND SETTER
 
 
-    public String getName() {
-        return name;
+    public String getName(String name) {
+        return this.name;
     }
 
     public void setName(String name) {
