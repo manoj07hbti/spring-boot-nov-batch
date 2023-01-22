@@ -1,7 +1,15 @@
 package com.example.springbootnovbatch.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Doctor {
 
+    @Id
+    @GeneratedValue
+    long id;
     String name;
     int age;
     String department;

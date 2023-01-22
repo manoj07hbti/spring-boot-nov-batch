@@ -1,15 +1,28 @@
 package com.example.springbootnovbatch.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name="DEMO_EMPLOYEE_TABLE")
 public class Employee {
 
+    @Id
+    @GeneratedValue
+    long id;
+
     String name;
-    int ID;
+
     double Salary;
 
+    // Default Constructor
+    public Employee() {
+    }
+
     // Parameterized Constructor
-    public Employee(String name, int ID, double salary) {
+    public Employee(String name, int id, double salary) {
         this.name = name;
-        this.ID = ID;
+
         Salary = salary;
     }
 
@@ -25,13 +38,7 @@ public class Employee {
         this.name = name;
     }
 
-    public int getID() {
-        return ID;
-    }
 
-    public void setID(int ID) {
-        this.ID = ID;
-    }
 
     public double getSalary() {
         return Salary;

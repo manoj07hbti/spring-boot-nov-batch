@@ -2,7 +2,7 @@ package com.example.springbootnovbatch.controller;
 
 import com.example.springbootnovbatch.model.Student;
 import org.springframework.web.bind.annotation.*;
-// import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 
