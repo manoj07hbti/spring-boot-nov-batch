@@ -45,4 +45,19 @@ public class StudentService {
 
      return "Successfully deleted data";
     }
+
+    public Student findByName(String name){
+
+        return repository.findByName(name);
+    }
+
+    public Student fndByIdName(long id, String name){
+
+        return repository.findByIdAndName(id, name);
+    }
+
+    public Student findBySQL(long id, String name){
+
+        return repository.nativeSQLQuery(id,name);
+    }
 }

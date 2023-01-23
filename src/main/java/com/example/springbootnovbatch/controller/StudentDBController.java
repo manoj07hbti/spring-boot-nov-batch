@@ -42,4 +42,24 @@ public class StudentDBController {
         return service.delete(id);
     }
 
+    // find by name
+
+    @RequestMapping("/find_by_name/{name}")
+    public Student find(@PathVariable String name){
+
+       return service.findByName(name);
+    }
+
+    @RequestMapping("/find_by_id_name/{id}/{name}")
+    public Student findByIdName(@PathVariable long id,@PathVariable String name){
+
+        return service.fndByIdName(id,name);
+    }
+
+    @RequestMapping("/find_by_sql/{id}/{name}")
+    public Student findbySQL(@PathVariable long id ,@PathVariable String name){
+
+        return service.findBySQL(id,name);
+    }
+
 }
