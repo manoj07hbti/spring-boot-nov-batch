@@ -48,4 +48,12 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 }

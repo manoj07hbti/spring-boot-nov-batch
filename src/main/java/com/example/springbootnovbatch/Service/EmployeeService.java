@@ -46,5 +46,15 @@ public String add (Employee employee) {
 
         return "Successfully delete data from database table";
     }
+    public Employee findByName(String name){
+    return repository .findByName(name);
+    }
+
+    public Employee findByIdName( long id,  String name){
+    return  repository.findByIdAndName(id ,name);
+    }
+    public Employee findBySQL (long id, String name){
+    return repository .nativeSQLQuery(id , name);
+    }
 
 }

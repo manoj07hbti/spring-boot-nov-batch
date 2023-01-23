@@ -44,4 +44,24 @@ public class EmployeeDBController {
         return service.delete(id );
 
     }
+    // find by name
+    @RequestMapping("/find_by_name/{name}")
+
+    public Employee find (@PathVariable String name){
+        return service.findByName(name);
+
+    }
+
+    // find by  id and name
+   @RequestMapping("/find_by_idname/{id}/{name}")
+    public Employee findByIdName(@PathVariable  long id , @PathVariable  String name){
+        return service.findByIdName(id,name);
+
+    }
+    // find by sql query
+    @RequestMapping("/find_by_sql/{id}/{name}")
+    public Employee  findBySQl(@PathVariable long id ,@PathVariable String name){
+        return  service .findBySQL(id,name);
+    }
+
 }
