@@ -40,4 +40,16 @@ public class EngineerDBController {
 
         return service.delete(id);
     }
+
+    // find by name
+    @RequestMapping("/find_By_Name/{name}")
+    public Engineer find(@PathVariable String name) {
+        return service.findByName(name);
+    }
+
+    // find by id and name
+    @RequestMapping("/find_By_Id_Name/{id}/{name}")
+    public Engineer findByIdName(@PathVariable long id, @PathVariable String name) {
+        return service.findByIdName(id,name);
+    }
 }

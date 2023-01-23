@@ -39,4 +39,13 @@ public class EngineerService {
         repository.deleteById(id);
         return "Delete DATA Successfully";
     }
+
+    // find method
+    public Engineer findByName(String name) {
+        return repository.findByName(name);
+    }
+
+    public Engineer findByIdName(long id, String name) {
+        return repository.findByIdAndName(id,name);
+    }
 }
