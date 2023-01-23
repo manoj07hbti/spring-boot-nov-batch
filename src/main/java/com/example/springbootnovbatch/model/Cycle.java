@@ -13,7 +13,7 @@ public class Cycle {
     long ID;
     String name;
 
-    @Column(name = "OFFER_PRICE")
+
     double price;
     int model;
 
