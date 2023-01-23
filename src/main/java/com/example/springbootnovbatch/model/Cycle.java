@@ -1,9 +1,9 @@
 package com.example.springbootnovbatch.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Entity(name = "DATABASE_CYCLE_LIST")
 public class Cycle {
@@ -14,17 +14,29 @@ public class Cycle {
     String name;
 
 
-    double price;
+    BigDecimal price;
     int model;
 
-    // NON DEFAULT CONSTRUCTOR
     public Cycle() {
     }
 
-    public Cycle(String name, double price, int model) {
+    // NON DEFAULT CONSTRUCTOR
+    public Cycle(String name, BigDecimal price, int model) {
+    }
+
+    public Cycle(long ID, String name, BigDecimal price, int model) {
+        this.ID = ID;
         this.name = name;
         this.price = price;
         this.model = model;
+    }
+
+    public long getID() {
+        return ID;
+    }
+
+    public void setID(long ID) {
+        this.ID = ID;
     }
 
     public String getName() {
@@ -35,11 +47,11 @@ public class Cycle {
         this.name = name;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

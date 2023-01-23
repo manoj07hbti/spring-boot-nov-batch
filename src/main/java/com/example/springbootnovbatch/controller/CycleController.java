@@ -4,6 +4,7 @@ package com.example.springbootnovbatch.controller;
 import com.example.springbootnovbatch.model.Cycle;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 @RestController
@@ -22,7 +23,7 @@ public class CycleController {
 
     // C- create
     @RequestMapping("/add_cycle/{name}/{price}/{model}")
-    public  String add(@PathVariable String name,@PathVariable double price,@PathVariable int model){
+    public  String add(@PathVariable String name, @PathVariable BigDecimal price, @PathVariable int model){
         Cycle cycle=new Cycle(name,price,model);
         cycleArrayList.add(cycle);
         return "Cycle added successfully";
