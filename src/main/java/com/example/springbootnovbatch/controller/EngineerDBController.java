@@ -43,4 +43,21 @@ public class EngineerDBController {
     public String deleteengdata(@PathVariable long engineerid){
         return service.deletengdata(engineerid);
     }
+    // find by name
+    @RequestMapping("/findbyname/{name}")
+    public Engineer findbyname(@PathVariable String name){
+        return service.findbyname(name);
+    }
+
+    // find by id and name
+    @RequestMapping("/findbyidname/{engineerid}/{name}")
+    public Engineer findbyidandname (@PathVariable long engineerid,@PathVariable String name){
+        return service.findbyidandname(engineerid, name);
+    }
+
+    // find by sql
+    @RequestMapping("/findbysql/{engineerid}/{name}")
+    public Engineer findbySQL(@PathVariable long engineerid, @PathVariable String name){
+        return service.findbySQL(engineerid, name);
+    }
 }
