@@ -49,18 +49,28 @@ public class EmployeeDBController {
     // D= delete
 
     @RequestMapping("/DELETE_EMPLOYEE_DB")   //http://localhost:8081/DELETE_EMPLOYEE_DB?ID=3
-    public String delete(@RequestParam long ID){   //  1
+    public String delete(@RequestParam long ID) {   //  1
 
         return Service.delete(ID);
+    }
 
+    // find by name
 
+    @RequestMapping("/FIND_BY_NAME/{name}")
 
+     public Employee find(@PathVariable String name){
+        return Service.findByName(name);
+    }
+    @RequestMapping("/FIND_BY_ID_NAME/{ID}/{name}")
 
+    public Employee find(@PathVariable long ID,@PathVariable String name) {
+        return Service.findByIDAndName(ID,name);
+    }
 
-
-
-
-
+    @RequestMapping("/FIND_BY_SQL/{ID}/{name}")
+     public Employee findBySQL(@PathVariable long ID,@PathVariable String name){
+        return Service.findBySQL(ID,name);
+     }
     }
 
 
@@ -69,6 +79,17 @@ public class EmployeeDBController {
 
 
 
-    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -41,10 +41,28 @@ public class EmployeeService {
 
     // D =delete
 
-    public String delete( long id){  // 2
+    public String delete( long ID){  // 2
 
-        repository.deleteById(id);// delete from table where id=id   // 3
+        repository.deleteById(ID);// delete from table where id=id   // 3
 
         return "Successfully deleted data";
+    }
+
+
+    // find by name
+
+    public Employee findByName(String name){
+        return repository.findByName(name);
+    }
+
+    public Employee findByIDAndName(long ID,String name){
+        return repository.findByIDAndName(ID,name);
+    }
+
+
+    // find by sql query
+
+    public Employee findBySQL(long ID, String name ){
+        return repository.nativesqlquery(ID,name);
     }
 }
