@@ -28,5 +28,14 @@ public class engineerservice {
         repository.deleteById(id);
         return "successfully deleted ";
     }
+    public Engineer FindByName(String name){
+        return  repository.findByName(name);
+    }
+    public Engineer FindByidName(long id, String name){
+        return  repository.findByIdAndName(id,name);
+    }
+    public  Engineer findBySql(long id,String name){
+        return repository.nativeSQLQuery(id, name);
+    }
 
 }
